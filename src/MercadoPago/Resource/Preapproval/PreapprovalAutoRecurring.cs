@@ -1,4 +1,4 @@
-﻿namespace MercadoPago.Resource.PreApproval
+namespace MercadoPago.Resource.PreApproval
 {
     using System;
 
