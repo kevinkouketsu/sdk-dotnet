@@ -1,19 +1,14 @@
 namespace MercadoPago.Client.PreapprovalPlan
 {
     /// <summary>
-    /// Data to create a Preapproval plan
+    /// 
     /// </summary>
-    public class PreapprovalPlanCreateRequest
+    public class PreapprovalPlanUpdateRequest
     {
         /// <summary>
         /// Return URL.
         /// </summary>
         public string BackUrl { get; set; }
-
-        /// <summary>
-        /// Seller ID.
-        /// </summary>
-        public long? CollectorId { get; set; }
 
         /// <summary>
         /// Preapproval plan title.
@@ -23,6 +18,6 @@ namespace MercadoPago.Client.PreapprovalPlan
         /// <summary>
         /// Recurring data.
         /// </summary>
-        public PreapprovalPlanAutoRecurringCreateRequest AutoRecurring { get; set; }
+        public PreapprovalPlanAutoRecurringUpdateRequest AutoRecurring { get; set; }
     }
 }

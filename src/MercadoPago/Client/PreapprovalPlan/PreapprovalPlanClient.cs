@@ -73,5 +73,25 @@ namespace MercadoPago.Client.PreapprovalPlan
         {
             return SendAsync("/preapproval_plan", HttpMethod.POST, request, requestOptions, cancellationToken);
         }
+
+        /// <summary>
+        /// Updates a Preapproval as an asynchronous operation.
+        /// Just send in <paramref name="request"/> the properties you want to update.
+        /// </summary>
+        /// <param name="id">The Preapproval ID.</param>
+        /// <param name="request">The data to update the Preapproval.</param>
+        /// <param name="requestOptions"><see cref="RequestOptions"/></param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>A task whose the result is the updated Preapproval.</returns>
+        /// <exception cref="MercadoPagoException">If a unexpected exception occurs.</exception>
+        /// <exception cref="MercadoPagoApiException">If the API returns a error.</exception>
+        public Task<PreapprovalPlan> UpdateAsync(
+            string id,
+            PreapprovalPlanUpdateRequest request,
+            RequestOptions requestOptions = null,
+            CancellationToken cancellationToken = default)
+        {
+            return SendAsync($"/preapproval_plan/{id}", HttpMethod.PUT, request, requestOptions, cancellationToken);
+        }
     }
 }

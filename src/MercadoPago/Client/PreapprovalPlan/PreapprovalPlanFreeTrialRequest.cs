@@ -3,7 +3,7 @@ namespace MercadoPago.Client.PreapprovalPlan
     /// <summary>
     /// Free trial
     /// </summary>
-    public class PreapprovalPlanFreeTrialCreateRequest
+    public class PreapprovalPlanFreeTrialRequest
     {
         /// <summary>
         /// Recurring frequency.

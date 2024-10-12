@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace MercadoPago.Client.PreapprovalPlan
 {
-    using System;
-
     /// <summary>
     /// Recurring data.
     /// </summary>
-    public class PreapprovalPlanAutoRecurringCreateRequest
+    public class PreapprovalPlanAutoRecurringUpdateRequest
     {
         /// <summary>
         /// Recurring frequency.
