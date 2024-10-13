@@ -54,6 +54,23 @@ namespace MercadoPago.Client.PreapprovalPlan
         }
 
         /// <summary>
+        /// Get async a Preapproval plan by your ID.
+        /// </summary>
+        /// <param name="id">The Preapproval ID.</param>
+        /// <param name="requestOptions"><see cref="RequestOptions"/></param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>A task whose the result is the Preapproval plan.</returns>
+        /// <exception cref="MercadoPagoException">If a unexpected exception occurs.</exception>
+        /// <exception cref="MercadoPagoApiException">If the API returns a error.</exception>
+        public Task<PreapprovalPlan> GetAsync(
+            string id,
+            RequestOptions requestOptions = null,
+            CancellationToken cancellationToken = default)
+        {
+            return SendAsync($"/preapproval_plan/{id}", HttpMethod.GET, null, requestOptions, cancellationToken);
+        }
+
+        /// <summary>
         /// Creates a Preapproval plan as an asynchronous operation.
         /// </summary>
         /// <param name="request">The data to create a Preapproval plan.</param>

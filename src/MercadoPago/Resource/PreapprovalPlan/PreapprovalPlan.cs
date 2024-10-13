@@ -73,6 +73,11 @@ namespace MercadoPago.Resource.PreapprovalPlan
         public string Status { get; set; }
 
         /// <summary>
+        /// Subscribed to the plan
+        /// </summary>
+        public int Subscribed { get; set; }
+
+        /// <summary>
         /// Response from API.
         /// </summary>
         public MercadoPagoResponse ApiResponse { get; set; }
